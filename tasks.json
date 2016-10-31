@@ -1,0 +1,20 @@
+{
+  "task":[
+    {
+      id:"P123-T1",
+      name:"Create DAO layer",
+      status:"Open",
+      totalhours:"8",
+      startdate:"12-OCT-2016",
+      enddate:"18-OCT-2016"
+    },
+    {
+      id:"P123-T2",
+      name:"Call DAO from service",
+      status:"Open",
+      totalhours:"16",
+      startdate:"10-NOV-2016",
+      enddate:"12-NOV-2016"
+    }
+  ]
+}
