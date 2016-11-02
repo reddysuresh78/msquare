@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="1dp"
+
+
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    >
+
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_view_background"
+        android:foreground="?android:attr/selectableItemBackground"
+        card_view:cardBackgroundColor="#ffffff"
+        card_view:cardCornerRadius="4dp"
+
+        card_view:cardElevation="3dp"
+        card_view:cardUseCompatPadding="true"
+        android:focusable="true"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView android:id="@+id/tvBorder"
+                android:layout_width="5dp"
+                android:layout_height="120dp"
+
+                android:background="@android:color/holo_green_dark"/>
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginLeft="16dp"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="24sp"
+                tools:text="Name" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvName"
+
+                android:layout_toRightOf="@id/tvName"
+                tools:text="New" />
+
+
+            <TextView
+                android:id="@+id/tvCurrentHours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvName"
+                android:layout_alignStart="@+id/tvName"
+                android:layout_below="@+id/tvName"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="24sp"
+                tools:text="6" />
+
+            <TextView
+                android:id="@+id/tvOf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvCurrentHours"
+                android:layout_alignBottom="@+id/tvCurrentHours"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_toEndOf="@+id/tvCurrentHours"
+                android:layout_toRightOf="@+id/tvCurrentHours"
+                android:text="@string/hours_of"
+                tools:text="hours of" />
+
+            <TextView
+                android:id="@+id/tvTotalHours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvOf"
+                android:layout_alignBottom="@+id/tvOf"
+                android:layout_toEndOf="@+id/tvOf"
+                android:layout_toRightOf="@+id/tvOf"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="24sp"
+                tools:text="8" />
+
+            <TextView
+                android:id="@+id/tvUsed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvTotalHours"
+                android:layout_alignBottom="@+id/tvTotalHours"
+                android:layout_marginLeft="4dp"
+                android:layout_toEndOf="@+id/tvTotalHours"
+                android:layout_toRightOf="@+id/tvTotalHours"
+                android:text="@string/hours_used"
+                tools:text="hours used" />
+
+            <TextView
+                android:id="@+id/tvTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvStartDate"
+                android:layout_alignBottom="@+id/tvStartDate"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_toEndOf="@+id/tvStartDate"
+                android:layout_toRightOf="@+id/tvStartDate"
+                android:text="@string/to"
+                tools:text="to" />
+
+            <TextView
+                android:id="@+id/tvSchedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvStartDate"
+                android:layout_alignBottom="@+id/tvStartDate"
+
+                android:layout_alignLeft="@+id/tvCurrentHours"
+                android:layout_alignStart="@+id/tvCurrentHours"
+                android:text="@string/schedule"
+                tools:text="Schedule" />
+
+            <TextView
+                android:id="@+id/tvEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTotalHours"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/tvTo"
+                android:layout_toRightOf="@+id/tvTo"
+                tools:text="14-Dec" />
+
+            <TextView
+                android:id="@+id/tvStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvEndDate"
+                android:layout_alignBottom="@+id/tvEndDate"
+                android:layout_marginLeft="4dp"
+                android:layout_toEndOf="@+id/tvSchedule"
+                android:layout_toRightOf="@+id/tvSchedule"
+                tools:text="13-Dec" />
+
+            <ImageButton
+                android:id="@+id/ibCompleteTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/ibModifyTaskStatus"
+                android:layout_marginEnd="14dp"
+                android:layout_marginRight="14dp"
+                android:background="@drawable/border_button"
+                android:onClick="completeTaskOnClickHandler"
+                android:src="@drawable/ic_done_black_36dp"
+                android:tint="#ffffff"
+                android:focusable="false"
+                />
+
+            <ImageButton
+                android:id="@+id/ibModifyTaskStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvTotalHours"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/ibCompleteTask"
+                android:layout_toStartOf="@+id/ibCompleteTask"
+                android:background="@drawable/border_button"
+                android:onClick="modifyTaskStatusOnClickHandler"
+                android:src="@drawable/ic_play_arrow_black_36dp"
+                android:tint="#ffffff"
+                android:focusable="false"
+                />
+
+            <TextView
+
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvStatus"
+                android:layout_alignLeft="@+id/ibModifyTaskStatus"
+                android:layout_alignStart="@+id/ibModifyTaskStatus"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/tvCurrentStatus"
+                android:textColor="@android:color/primary_text_light"
+                />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
